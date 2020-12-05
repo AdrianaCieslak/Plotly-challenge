@@ -24,8 +24,8 @@ d3.json("samples.json").then((importedData) => {
 function optionChanged(selNumber) {
   d3.json("samples.json").then((data) => {
   
-    var samples = data.samples;
-    var results = samples.filter(data => data.id == selNumber);
+    var sampleData = data.samples;
+    var results = sampleData.filter(data => data.id == selNumber);
     var result = results[0];
     console.log(result);
 
@@ -62,7 +62,7 @@ function optionChanged(selNumber) {
 //Use otu_ids for the marker colors.
 //Use otu_labels for the text values.
 
-var results = samples.filter(data => data.id == selNumber);
+var results = sampleData.filter(data => data.id == selNumber);
 var result = results[0];
 
 
